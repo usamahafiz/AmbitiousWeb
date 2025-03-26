@@ -1,38 +1,90 @@
-/* Notes Page Styling */
 .notes-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
 
-  
-  .intro-text {
-    margin: 10px auto;
-    width: 80%;
-    font-size: 1rem;
-    color: #333;
-  }
-  
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.subject-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+}
+
+.subject-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.subject-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dropdown-item {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: #e9ecef;
+}
+
+.nested-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  background: #e0e0e0;
+  padding-left: 10px;
+}
+
+.nested-dropdown.open {
+  max-height: 200px;
+}
+
+.nested-item {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.nested-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
   .subjects-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    padding: 20px;
   }
-  
-  .subject-card {
-    background-color: #dddee0;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .subjects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
-  
-  .subject-card:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
+}
+
+
+
+

@@ -8,7 +8,7 @@ export default function FrontEnd() {
     <>
     <Routes>
         
-        <Route path="notes" element={<Notes />} />
+        <Route path="/notes" element={<Notes />} />
         <Route path="/notes/:subject" element={<SubNotes />} />
           
         

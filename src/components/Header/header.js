@@ -17,7 +17,7 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="nav-links">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
           <a href="#">About Us</a>
           <a href="#">Our Services</a>
           <a href="#">Contact Us</a>
