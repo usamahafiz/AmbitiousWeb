@@ -7,36 +7,36 @@ const categories = [
   { 
     title: "Class 9", 
     links: [
-      { name: "Past Papers", url: "#" },
-      { name: "Test Yourself", url: "#" },
       { name: "Notes", url: "#" },
+      { name: "Past Papers", url: "/notes" },
+      { name: "Test Yourself", url: "#" },
       { name: "Guess Papers", url: "#" }
     ]
   },
   { 
     title: "Class 10", 
     links: [
+      { name: "Notes", url: "#" },
       { name: "Past Papers", url: "#" },
       { name: "Test Yourself", url: "#" },
-      { name: "Notes", url: "#" },
       { name: "Guess Papers", url: "#" }
     ]
   },
   { 
     title: "Class 11", 
     links: [
+      { name: "Notes", url: "#" },
       { name: "Past Papers", url: "#" },
       { name: "Test Yourself", url: "#" },
-      { name: "Notes", url: "#" },
       { name: "Guess Papers", url: "#" }
     ]
   },
   { 
     title: "Class 12", 
     links: [
+      { name: "Notes", url: "#" },
       { name: "Past Papers", url: "#" },
       { name: "Test Yourself", url: "#" },
-      { name: "Notes", url: "#" },
       { name: "Guess Papers", url: "#" }
     ]
   }
