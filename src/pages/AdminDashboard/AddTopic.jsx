@@ -35,6 +35,7 @@ const AddContent = () => {
   const [savingDraft, setSavingDraft] = useState(false);
   const [form] = Form.useForm();
 
+
   useEffect(() => {
     const fetchClasses = async () => {
       const querySnapshot = await getDocs(collection(fireStore, "classes"));
@@ -184,7 +185,7 @@ const AddContent = () => {
 
   return (
     <div className="form-container mt-2">
-      <h1 className="text-center mb-2">Create New Topic</h1>
+      <h1 className="text-center mb-2 py-5">Create New Topic</h1>
 
       <Card
         bordered={false}
@@ -244,9 +245,13 @@ const AddContent = () => {
             </Select>
           </Form.Item>
 
-          <Form.Item label="subCategory" name="subCategory">
-            <Input placeholder="Enter subCategory" />
+          <Form.Item label="Category" name="category">
+            <Input placeholder="Enter category" />
           </Form.Item>
+
+          {/* <Form.Item label="subCategory" name="subCategory">
+            <Input placeholder="Enter subCategory" />
+          </Form.Item> */}
 
           <Form.Item label="Description" name="description">
             <Input.TextArea
@@ -265,6 +270,11 @@ const AddContent = () => {
           <Form.Item>
             <Button type="primary" htmlType="submit" block disabled={uploading}>
               {uploading ? <LoadingOutlined /> : "Submit"}
+            </Button>
+          </Form.Item>
+          <Form.Item>
+            <Button type="default" block onClick={() => navigate('/dashboard/ManageProducts')}>
+              Manage Topics
             </Button>
           </Form.Item>
         </Form>
