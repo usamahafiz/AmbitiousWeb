@@ -99,7 +99,7 @@ const ManageContent = () => {
       class: record.class,
       subcategory: record.subcategory, // Ensure this is populated
       description: record.description || "",
-      fileURLs: record.fileURLs || [], // Store previous file URLs
+      fileUrls: record.fileUrls || [], // Store previous file URLs
     });
 
     setIsModalVisible(true);
@@ -112,7 +112,7 @@ const ManageContent = () => {
   };
 
   const handleRemoveFile = async (index, productId) => {
-    const fileURL = editingProduct.fileURLs[index];
+    const fileURL = editingProduct.fileUrls[index];
 
     if (!fileURL) return;
 
@@ -125,16 +125,16 @@ const ManageContent = () => {
       console.log("File deleted successfully from Storage");
 
       // Step 2: Update Firestore to remove the file URL
-      const updatedFiles = editingProduct.fileURLs.filter(
+      const updatedFiles = editingProduct.fileUrls.filter(
         (_, i) => i !== index
       );
       const productRef = doc(fireStore, "topics", productId); // Adjust collection name if needed
 
-      await updateDoc(productRef, { fileURLs: updatedFiles });
+      await updateDoc(productRef, { fileUrls: updatedFiles });
       console.log("File URL removed from Firestore");
 
       // Step 3: Update local state
-      setEditingProduct((prev) => ({ ...prev, fileURLs: updatedFiles }));
+      setEditingProduct((prev) => ({ ...prev, fileUrls: updatedFiles }));
     } catch (error) {
       console.error("Error deleting file:", error);
     }
@@ -148,7 +148,7 @@ const ManageContent = () => {
   
       // Upload new files if any
       if (newFiles.length > 0) {
-        const uploadedFileURLs = await Promise.all(
+        const uploadedfileUrls = await Promise.all(
           newFiles.map(async (file) => {
             const fileRef = ref(storage, `topics/${editingProduct.id}/${file.name}`);
             await uploadBytes(fileRef, file);
@@ -157,9 +157,9 @@ const ManageContent = () => {
         );
   
         // Merge old and new file URLs
-        updatedValues.fileURLs = [
-          ...(editingProduct.fileURLs || []),
-          ...uploadedFileURLs,
+        updatedValues.fileUrls = [
+          ...(editingProduct.fileUrls || []),
+          ...uploadedfileUrls,
         ];
       }
   
@@ -187,11 +187,11 @@ const ManageContent = () => {
     { title: "Description", dataIndex: "description", key: "description" },
     {
       title: "File",
-      dataIndex: "fileURLs",
-      key: "fileURLs",
-      render: (fileURLs) =>
-        fileURLs && fileURLs.length > 0
-          ? fileURLs.map((url, index) => (
+      dataIndex: "fileUrls",
+      key: "fileUrls",
+      render: (fileUrls) =>
+        fileUrls && fileUrls.length > 0
+          ? fileUrls.map((url, index) => (
               <div key={index}>
                 <a href={url} target="_blank" rel="noopener noreferrer">
                   View File {index + 1}
@@ -283,8 +283,8 @@ const ManageContent = () => {
           </Form.Item>
 
           <Form.Item label="Uploaded Files">
-            {editingProduct?.fileURLs?.length > 0 ? (
-              editingProduct.fileURLs.map((url, index) => (
+            {editingProduct?.fileUrls?.length > 0 ? (
+              editingProduct.fileUrls.map((url, index) => (
                 <div
                   key={index}
                   style={{
