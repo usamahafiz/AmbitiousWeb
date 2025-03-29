@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/cardsection.css";
 import { FaBookOpen } from "react-icons/fa";
 
@@ -55,9 +56,10 @@ const CardSection = () => {
           <h3>{category.title}</h3>
           <ul>
             {category.links.map((link, idx) => (
-              <li key={idx}>
-                <a href={link.url}>{link.name}</a>
-              </li>
+             <li key={idx}>
+             <Link to={link.url}>{link.name}</Link>
+           </li>
+           
             ))}
           </ul>
         </div>

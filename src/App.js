@@ -1,7 +1,4 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
-import NotesPage from "./components/category/notes";
-import SubjectNotes from "./components/category/subnotes";
 import './index.css'; // Importing the CSS file
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Bootstrap JS (for components like navbar, modals, tooltips, etc.)
@@ -15,9 +12,11 @@ import Footer from './components/Footer/footer';
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
       <Header />
+      <main className="main-content">
       <Router/>
+      </main>
       <Footer />
     
     

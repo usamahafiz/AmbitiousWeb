@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaRegBell, FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import "../../assets/css/header.css";
 import logo from "../../assets/images/logo.png";
@@ -17,17 +18,17 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="nav-links">
-          <a href="/">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Our Services</a>
-          <a href="#">Contact Us</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          {/* <Link to="/services">Our Services</Link> */}
+          <Link to="/contact">Contact Us</Link>
         </nav>
 
         {/* Right Section */}
         <div className="right-section">
-        <button className="search-btn">
+          {/* <button className="search-btn">
             <FaSearch className="search-icon" /> Search
-          </button>
+          </button> */}
           <button className="sign-in-btn">Sign Up</button>
           <FaRegBell className="bell-icon" />
         </div>
@@ -41,11 +42,11 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Our Services</a>
-          <a href="#">Contact Us</a>
-          <button className="search-btn">Search Name</button>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/services">Our Services</Link>
+          <Link to="/contact">Contact Us</Link>
+          <button className="search-btn">Search</button>
           <button className="sign-in-btn">Sign In</button>
         </div>
       )}

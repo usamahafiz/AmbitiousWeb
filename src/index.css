@@ -14,4 +14,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full height */
+}
+
+.main-content {
+  flex-grow: 1; /* Pushes footer down */
+  
+}
 
