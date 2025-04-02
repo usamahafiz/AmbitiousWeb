@@ -6,7 +6,7 @@
 
 .subjects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
   gap: 20px;
   justify-content: center;
 }
@@ -75,15 +75,16 @@
 
 @media (max-width: 768px) {
   .subjects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 1fr; /* 1 column for tablets and smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .subjects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: 1fr; /* Ensure only 1 card on very small screens */
   }
 }
+
 
 
 
