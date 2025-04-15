@@ -6,6 +6,7 @@
     background: #f8f9fa;
     min-height: 80vh;
     background-image: url('../images/backgroundambitious.jpg');
+    overflow: hidden; /* Prevents content from overflowing */
   }
   
   .hero-content {
@@ -44,6 +45,7 @@
     font-size: 1rem;
     padding: 8px;
     border-radius: 50px;
+    min-width: 0; /* Prevents overflow */
   }
   
   .search-bar .search-bton {
@@ -54,6 +56,8 @@
     border-radius: 30px;
     cursor: pointer;
     transition: background 0.3s;
+    white-space: nowrap; /* Prevents text from wrapping */
+    flex-shrink: 0; /* Prevents button from shrinking */
   }
   
   .search-bar .search-btn:hover {

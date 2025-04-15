@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/Ambitious logo .jpg"
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -12,20 +12,20 @@ const Footer = () => {
         style={{ backgroundColor: "#ECEFF1" }}
       >
         <section>
-          <div className="container text-center text-md-start pt-5 mt-4">
-            <div className="row mt-3">
+          <div className="container text-center text-md-start pt-5 mt-1">
+            <div className="row mt-2">
               <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-1">
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <img src={logo} width="40" alt="Logo" />
+                  <img src={logo} width="45" alt="Logo" />
                   <h1 className="text-dark">Ambitious</h1>
                 </div>
 
-                <p className="mt-1">
+                <p className="mb-0 text-dark">
                   Ambitious is an innovative educational platform dedicated to empowering students with high-quality learning resources. We offer engaging courses, interactive quizzes, and expert guidance to help learners achieve academic excellence.
                 </p>
               </div>
 
-              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-1">
+              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase fw-bold">Features</h6>
                 <hr
                   className="mb-4 mt-0 d-inline-block mx-auto"
@@ -48,7 +48,7 @@ const Footer = () => {
                     Privacy Policy
                 </p>
               </div>
-              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-1">
+              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase fw-bold">Important Sections</h6>
                 <hr
                   className="mb-4 mt-0 d-inline-block mx-auto"
@@ -59,7 +59,7 @@ const Footer = () => {
                   }}
                 />
                 <p>
-                  <Link to="/shop" className="text-dark" style={{ textDecoration: "none", color: "black" }}>
+                  <Link to="/about" className="text-dark" style={{ textDecoration: "none", color: "black" }}>
                     About
                   </Link>
                 </p>
@@ -79,7 +79,7 @@ const Footer = () => {
                   </Link>
                 </p>
               </div>
-              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-1">
+              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mt-3">
                 <h6 className="text-uppercase fw-bold">Contact</h6>
                 <hr
                   className="mb-4 mt-0 d-inline-block mx-auto"
@@ -91,13 +91,13 @@ const Footer = () => {
                 />
                 <p>
                   <Link to="tel:30000000000" className="text-dark" style={{ textDecoration: "none", color: "black" }}>
-                    +92 300 000 0000
+                  0333-4082706
                   </Link>
                 </p>
-                <p className="mt-2">283 N. Glenwood Street, Levittown, NY</p>
+                <p className="mt-2">Main shop Jia Musa Shahdara Lahore, Pakistan , 54950</p>
                 <p className="text-dark">
                   <Link to="mailto:  ambitiousacademy@gmail.com" className="text-dark" style={{ textDecoration: "none", color: "black" }}>
-                    ambitiousacademy@gmail.com
+                  theambitious.edu@gmail.com
                   </Link>
                 </p>
               </div>

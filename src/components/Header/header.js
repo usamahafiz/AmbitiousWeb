@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaRegBell, FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import "../../assets/css/header.css";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/Ambitious logo .jpg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
