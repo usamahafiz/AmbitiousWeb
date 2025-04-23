@@ -5,21 +5,21 @@ import "../assets/css/testimonial.css";
 const testimonialsData = [
   {
     id: 1,
-    name: 'Anna Trevor',
+    name: 'Husnain Ali',
     role: 'Student',
     text: 'This platform transformed my learning experience! The interactive lessons and expert guidance made complex topics so easy to understand.',
     image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).webp"
   },
   {
     id: 2,
-    name: 'John Doe',
+    name: 'Ali Ahmad',
     role: 'Teacher',
     text: 'I never thought online education could be this engaging! The well-structured courses and real-world examples kept me motivated throughout.',
     image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
   },
   {
     id: 3,
-    name: 'Jane Smith',
+    name: 'Sarah Khan',
     role: 'Student',
     text: 'Thanks to this website, I gained the confidence to excel in my studies. The resources and supportive community made all the difference!',
     image: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp'

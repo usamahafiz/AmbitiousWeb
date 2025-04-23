@@ -5,6 +5,7 @@ import SubNotes from '../../components/category/subnotes';
 import Preview from "../../components/pdfviewer/index";
 import AboutSection from './AboutPage';
 import ContactSection from './ContactPage';
+import  DescriptionPage  from '../../components/descriptionpage';
 
 export default function FrontEnd() {
   return (
@@ -18,7 +19,7 @@ export default function FrontEnd() {
         <Route path="/note/:subject" element={<SubNotes />} />
         <Route path="/about" element={<AboutSection/>} />
         <Route path="/contact" element={<ContactSection/>} />
-
+        <Route path="/description/:subCategory/:topicId" element={<DescriptionPage />} />
           
         
     </Routes>
